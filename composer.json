@@ -1,5 +1,5 @@
 {
-    "name": "dbellettini/eventstore-client",
+    "name": "tahoelimited/eventstore-client",
     "description": "EventStore client for PHP",
     "type": "library",
     "keywords": [
@@ -21,7 +21,11 @@
         {
             "name": "Contributors",
             "homepage": "https://github.com/dbellettini/php-eventstore-client/graphs/contributors"
-        }
+        },
+	{
+	    "name": "Pablo Martelletti",
+	    "email": "pmartelletti@gmail.com"
+	}
     ],
     "require": {
         "php": ">=5.5.0",

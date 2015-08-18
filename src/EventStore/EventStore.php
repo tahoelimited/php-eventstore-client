@@ -96,7 +96,7 @@ final class EventStore implements EventStoreInterface
     {
         $url = $streamFeed->getLinkUrl($relation);
 
-        if (empty($url)) {
+        if (empty($url) || empty($streamFeed->getEntries())) {
             return null;
         }
 
