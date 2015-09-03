@@ -95,6 +95,8 @@ final class EventStore implements EventStoreInterface
     public function navigateStreamFeed(StreamFeed $streamFeed, LinkRelation $relation)
     {
         $url = str_replace('127.0.0.1:2113', '52.19.46.128', $streamFeed->getLinkUrl($relation));
+        $url = str_replace('localhost:2113', '52.19.46.128', $streamFeed->getLinkUrl($relation));
+        
 
         if (empty($url) || empty($streamFeed->getEntries())) {
             return null;
@@ -126,6 +128,7 @@ final class EventStore implements EventStoreInterface
     public function readEvent($eventUrl)
     {
         $eventUrl = str_replace('127.0.0.1:2113', '52.19.46.128', $eventUrl);
+        $eventUrl = str_replace('localhost:2113', '52.19.46.128', $eventUrl);
         $request = $this->getJsonRequest($eventUrl);
         $this->sendRequest($request);
 
